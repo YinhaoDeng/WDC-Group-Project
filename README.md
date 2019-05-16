@@ -1,4 +1,4 @@
-# WDCGroupProject	
+# WDC Group Project
 This is our WDC Group Project repository for version-control purpose	
 
  上传除node_modules以外， 每次更新的所有code， 并附加注释 	
