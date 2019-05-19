@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<title>Signin</title>
-<meta name="google-signin-client_id" content="228533651083-kl2dg9sifqb9o8ppvq6c2i0tbm7lla2i.apps.googleusercontent.com">
-
-<script src="https://apis.google.com/js/api.js" async defer></script>
+	<title>Signin page</title>
+	<!-- load the google platform library -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<!-- specify your app's client ID -->
+	<meta name="google-signin-client_id" content="10712956315-03hq0emnv71ir8eajbj1a7iccdcp447g.apps.googleusercontent.com ">
+	<!--jQuery CDN--> <!--If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network). 
+	Both Google and Microsoft host jQuery.-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="/public/javascripts/signin.js"></script>
 </head>
 <body>
 
-	<div class="contact-form">
 		<h3>Login</h3>
 		<form action="#" method="post">
 			<p><input type="text" name="Email" placeholder="Email" required=""></p>
 			<p><input type="text" name="Password" placeholder="Password" required=""></p>
 			<p><input type="submit" value="Send"></p>
-			
-		<!-- 	<input type="image" alt="Continue with Facebook" src="images/facebook.png" > -->
-
+			<!-- Facebook Sign in -->
 			<button type="button">Continue with Facebook</button>
+			<br>
+			<br>
 			<div class="g-signin2" data-onsuccess="onSignIn"><button type="button">Continue with Google</button></div>
 					
 			<hr><button type="button">Create new account</button>
