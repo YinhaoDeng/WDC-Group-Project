@@ -4,8 +4,6 @@
  */
 /* FONT PATH
  * -------------------------- */
-
- 
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
@@ -119,7 +117,7 @@
     transform: rotate(359deg);
   }
 }
-/* .fa-rotate-90 {
+.fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -2198,4 +2196,4 @@
   margin: 0;
   overflow: visible;
   clip: auto;
-} */
+}
