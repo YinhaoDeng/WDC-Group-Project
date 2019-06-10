@@ -30,22 +30,36 @@
     <!--    //rating-star-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .checked {
+        .checked {   /* star color*/
         color: orange;
         }
 
-        #map {
-            height: 50%;
-            width: 30%;
-            padding-right: 15em;
-            padding-left: 15em;
-         
+        #map { 
+            height: 60%;
+            width: 70%;
+            padding-right: 13em;
+            padding-left: 10em;
+            top: 1em;
+            left: 5em;
         }
 
         html, body {
         height: 100%;
         margin: left;
         padding: 0;
+        }
+
+        .vl {          /* DO NOT CHANGE IT!!!!!!!!!!!!!!!!!! */
+        border-left: 2px solid lightgrey;
+        height: 46.1em;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 46.8em;
+        }
+
+        .special-horizontal-style{
+            border-top: 2px solid lightgrey;
         }
     </style>
         
@@ -57,7 +71,7 @@
 
 
 <body>
-	<!-- banner -->
+	<!-------------- banner ------------->
 	<div class="banner">
 		<div class="top-banner">
 			<div class="container">
@@ -161,10 +175,13 @@
 			</div>
 		</div>
 	</div>
-	<!-- banner -->
-    
+	<!------------ banner --------------->
+    <h1 style="text-align:center">Restaruant in Adelaide</h1>
+    <hr class="special-horizontal-style">
     <div class="container999">
-            <div class="left-half">
+        <div class="left-half">
+
+                <div class="vl"></div>  <!--vertical line-->
     <!----------------------------------------Google map API------------------------------------------->
         <div id="map"></div>
         <script>
@@ -172,75 +189,76 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: -34.93, lng: 138.60},
-                zoom: 14
+                zoom: 12
             });
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
         </script>
     <!-----------------------------------------Google map API stops----------------------------------------->
-    
-
+    <br>
+<hr class="special-horizontal-style">
 
 <!-----------------------------------------------------------
   Cuisine check boxes
 ------------------------------------------------------------->
-
-        <div>
-            <h3>Cuisines</h3>   
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Australian-cuisine" 
-                value="Australian"
-                align = "right"
-                >
-            <label data-on-clicked="a" for="Australian-cuisine">
-                <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
-            </label>
-        </div>
-
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Asian-cuisine" 
-                value="Asian" 
-                >
-            <label data-on-clicked="a" for="Asian-cuisine">
-                <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
-            </label>
-        </div>
-        
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Italian-cuisine" 
-                value="Italian" 
+        <div class="cuisines">
+            <div>
+                <h3>Cuisines</h3>   
+                <input type="checkbox" 
+                    name="cuisine" 
+                    id="Australian-cuisine" 
+                    value="Australian"
+                    align = "right"
                     >
-            <label data-on-clicked="a" for="modern-australian-cuisine">
-                <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
-            </label>
-        </div>
+                <label data-on-clicked="a" for="Australian-cuisine">
+                    <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
+                </label>
+            </div>
 
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Japanese-cuisine" 
-                value="Japanese" 
+            <div>
+                <input type="checkbox" 
+                    name="cuisine" 
+                    id="Asian-cuisine" 
+                    value="Asian" 
                     >
-            <label data-on-clicked="a" for="Japanese-cuisine">
-                <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
-            </label>
-        </div>
+                <label data-on-clicked="a" for="Asian-cuisine">
+                    <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
+                </label>
+            </div>
+            
+            <div>
+                <input type="checkbox" 
+                    name="cuisine" 
+                    id="Italian-cuisine" 
+                    value="Italian" 
+                        >
+                <label data-on-clicked="a" for="modern-australian-cuisine">
+                    <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
+                </label>
+            </div>
 
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Indian-cuisine" 
-                value="Indian" 
-                    >
-            <label data-on-clicked="a" for="Indian-cuisine">
-                <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
-            </label>
+            <div>
+                <input type="checkbox" 
+                    name="cuisine" 
+                    id="Japanese-cuisine" 
+                    value="Japanese" 
+                        >
+                <label data-on-clicked="a" for="Japanese-cuisine">
+                    <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" 
+                    name="cuisine" 
+                    id="Indian-cuisine" 
+                    value="Indian" 
+                        >
+                <label data-on-clicked="a" for="Indian-cuisine">
+                    <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
+                </label>
+            </div>
         </div>
     </div>
     
