@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="stylesheets/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+
+<script src="javascripts/jquery-1.11.1.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<!-- light-box -->
+<link rel="stylesheet" href="css/lightbox.css">
+<!-- //light-box -->
+<script src="javascripts/SmoothScroll.min.js"></script>
+<!--search jQuery-->
+<script src="javascripts/main.js"></script>
+<!--//search jQuery-->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3layouts-banner-top">
+		
+	</div>
+	<!-- banner -->
+	<div class="banner about-banner">
+		<div class="top-banner">
+			<div class="container">
+				<div class="top-banner-left">
+					<ul>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
+						<li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> mail@example.com</a></li>
+					</ul>
+				</div>
+				<div class="top-banner-right">
+					<ul>
+						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h1>
+						<a href="home.html">OrderBoss</a>
+					</h1>
+				</div>
+				<div class="top-nav">
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">search						
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="search.html">Search</a></li>
+								<li><a href="about.html">About</a></li>				
+								<li><a href="contact.html">Contact</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+					</nav>		
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="w3-about-heading">
+			<h2>Book</h2>
+		</div>
+	</div>
+	<!-- banner -->
+
+		<div class="container">	
+
+
+	<!-- banner -->
+    
+
+<!-----------------------------------------------------------
+restaurant info
+------------------------------------------------------------->
+
+        <h2 href="???" title="SouthernTaste" target="_blank" style = " margin-top: 40px; margin-bottom: 40px">SouthernTaste Restaurant</h2>  
+
+        <img src="http://www.hireafoodtruck.com.au/images/product_images/Chinese%20food%20menu.jpg" align = "left" 
+        style="width:500px;height:350px;margin-bottom:40px; margin-left:30px">
+
+        <img class="img1" src="https://www.goodfood.com.au/content/dam/images/h/1/3/3/4/1/image.related.wideLandscape.940x529.h132gk.png/1532586740624.jpg" align = "middle" 
+        style="width:500px;height:350px;margin-left:60px; margin-bottom:30px">
+   
+        <h2>Adelaide</h2>
+
+
+    <div class="score ">
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star checked"></span>
+       <span class="fa fa-star"></span>
+       <span class="fa fa-star"></span>
+
+            <span class="score-description">
+                 <a class="review-count" href="reviews">38 reviews</a>
+            </span>
+            </div>
+
+    <ul>
+            <li class="cuisines">Cuisines:Asian</li>
+            <li class="cost">Average cost per person: $55</li>
+            <li class="opening hour">Open 5pm - 10pm</li>
+    </ul>
+<hr/>
+
+<div class = "menu">
+    <h2>Menu</h2>
+
+    <ul>
+        <li>Spring Roll</li>
+        <li>Beef fried noodle</li>
+        <li>Fried rice</li>
+    </ul>
+    
+</div>
+
+<hr/>
+
+<!--Book-->
+
+<h2>Book Now</h2>
+<center>
+            <label class="date">
+                <input id="Date-bar"
+                       type="date"
+                       name="date"
+                       value="2019-06-09"
+                       data-default-date="2019-06-09">
+            </label>
+        
+            <label class="DinningTime">
+                <select name="DinningTime" data-default-service="Dinner" id="DinningTime-bar">
+                        <option value="None" disabled="disabled" hidden="hidden">Time</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner" selected>Dinner</option>
+                </select>
+            </label>
+            
+            <label class="Party Size">
+                <select name="PartySize"  data-default-covers="2" id="PartySize-bar">
+                        <option value="0" disabled="disabled" hidden="hidden" >Party Size</option>
+                        <option value="1" >1 person</option>
+                        <option value="2" selected>2 people</option>
+                        <option value="3" >3 people</option>
+                        <option value="4" >4 people</option>
+                        <option value="5" >5 people</option>
+                        <option value="6" >6 people</option>
+                        <option value="7" >7 people</option>
+                        <option value="8" >8 people</option>
+                        <option value="9" >9 people</option>
+                        <option value="10" >10 people</option>
+                        <option value="11" >11 people</option>
+                        <option value="12" >12 people</option>
+                </select>
+            </label>
+            <button type="button" onclick="load()"> Confirm</button>
+        <!--Confirm button-->
+    </center>
+
+
+
+<hr/>	
+
+<!--Review-->
+
+<h2>Review</h2>
+
+<form>
+        <textarea id="words" rows="10" cols="100">Enter comment</textarea>
+        <input type="button" onclick="getwords()" value="Enter" /> <br>
+        <p id="para"></p>
+        </form>
+        
+        <script type="text/javascript">
+        function getwords() {
+          text = words.value;
+          document.getElementById("para").innerHTML += '<p>'+text
+          document.getElementById("words").value = "enter"
+        }
+        </script>
+
+<!-- <form action="SouthernTaste.html" method="post">
+    <div>
+    <textarea name="Write your comment here" placeholder="Write your comment here!" required="" allowfullscreen=""></textarea>
+    </div>
+    <input type="submit" value="Send">
+    </form> -->
+
+
+
+</div>
+<!-- footer -->
+<div class="w3-agile-footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid">
+                <div class="footer-grid-heading">
+                    <h4>Address</h4>
+                </div>
+                <div class="footer-grid-info">
+                    <p>Eiusmod Tempor inc
+                        <span>St Dolore Place,Kingsport 56777.</span>
+                    </p>
+                    <p class="phone">Phone : +1 123 456 789
+                        <span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <div class="footer-grid-heading">
+                    <h4>Navigation</h4>
+                </div>
+                <div class="footer-grid-info">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="search.html">search</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <div class="footer-grid-heading">
+                    <h4>Follow</h4>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <div class="footer-grid-heading">
+                    <h4>Newsletter</h4>
+                </div>
+                <div class="footer-grid-info">
+                    <form action="#" method="post">
+                        <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="agileits-w3layouts-copyright">
+            <p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>	
+</html>
