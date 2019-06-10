@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,36 +29,20 @@
     <!--    //rating-star-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .checked {   /* star color*/
+        .checked {
         color: orange;
         }
-
-        #map { 
-            height: 60%;
-            width: 70%;
-            padding-right: 13em;
-            padding-left: 10em;
-            top: 1em;
-            left: 5em;
+        #map {
+            height: 50%;
+            width: 30%;
+            padding-right: 15em;
+            padding-left: 15em;
+         
         }
-
         html, body {
         height: 100%;
         margin: left;
         padding: 0;
-        }
-
-        .vl {          /* DO NOT CHANGE IT!!!!!!!!!!!!!!!!!! */
-        border-left: 2px solid lightgrey;
-        height: 46.1em;
-        position: absolute;
-        left: 50%;
-        margin-left: -3px;
-        top: 46.8em;
-        }
-
-        .special-horizontal-style{
-            border-top: 2px solid lightgrey;
         }
     </style>
         
@@ -71,7 +54,7 @@
 
 
 <body>
-	<!-------------- banner ------------->
+	<!-- banner -->
 	<div class="banner">
 		<div class="top-banner">
 			<div class="container">
@@ -104,9 +87,9 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a class="active" href="index.html">Home</a></li>
+								<li><a href="home.html">Home</a></li>
 								<li><a href="about.html">About</a></li>							
-								<li><a href="search.html">Search</a></li>
+								<li><a class="active" href="search.html">Search</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>	
 							<div class="clearfix"> </div>
@@ -163,7 +146,7 @@
                                                         <option value="12" >12 people</option>
                                                 </select>
                                             </label>
-                                            <button type="button" onclick="load()"> Let's Go</button>
+                                           <a class="agile-icon" href="search.html"><i class="fa fa-search">Let's go!</i></a>
                                         <!--Let's go search button-->
                                         
                                         
@@ -175,13 +158,10 @@
 			</div>
 		</div>
 	</div>
-	<!------------ banner --------------->
-    <h1 style="text-align:center">Restaruant in Adelaide</h1>
-    <hr class="special-horizontal-style">
+	<!-- banner -->
+    
     <div class="container999">
-        <div class="left-half">
-
-                <div class="vl"></div>  <!--vertical line-->
+            <div class="left-half">
     <!----------------------------------------Google map API------------------------------------------->
         <div id="map"></div>
         <script>
@@ -189,76 +169,75 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: -34.93, lng: 138.60},
-                zoom: 12
+                zoom: 14
             });
             }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
         </script>
     <!-----------------------------------------Google map API stops----------------------------------------->
-    <br>
-<hr class="special-horizontal-style">
+    
+
 
 <!-----------------------------------------------------------
   Cuisine check boxes
 ------------------------------------------------------------->
-        <div class="cuisines">
-            <div>
-                <h3>Cuisines</h3>   
-                <input type="checkbox" 
-                    name="cuisine" 
-                    id="Australian-cuisine" 
-                    value="Australian"
-                    align = "right"
+
+        <div>
+            <h3>Cuisines</h3>   
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Australian-cuisine" 
+                value="Australian"
+                align = "right"
+                >
+            <label data-on-clicked="a" for="Australian-cuisine">
+                <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
+            </label>
+        </div>
+
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Asian-cuisine" 
+                value="Asian" 
+                >
+            <label data-on-clicked="a" for="Asian-cuisine">
+                <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
+            </label>
+        </div>
+        
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Italian-cuisine" 
+                value="Italian" 
                     >
-                <label data-on-clicked="a" for="Australian-cuisine">
-                    <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
-                </label>
-            </div>
+            <label data-on-clicked="a" for="modern-australian-cuisine">
+                <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
+            </label>
+        </div>
 
-            <div>
-                <input type="checkbox" 
-                    name="cuisine" 
-                    id="Asian-cuisine" 
-                    value="Asian" 
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Japanese-cuisine" 
+                value="Japanese" 
                     >
-                <label data-on-clicked="a" for="Asian-cuisine">
-                    <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
-                </label>
-            </div>
-            
-            <div>
-                <input type="checkbox" 
-                    name="cuisine" 
-                    id="Italian-cuisine" 
-                    value="Italian" 
-                        >
-                <label data-on-clicked="a" for="modern-australian-cuisine">
-                    <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
-                </label>
-            </div>
+            <label data-on-clicked="a" for="Japanese-cuisine">
+                <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
+            </label>
+        </div>
 
-            <div>
-                <input type="checkbox" 
-                    name="cuisine" 
-                    id="Japanese-cuisine" 
-                    value="Japanese" 
-                        >
-                <label data-on-clicked="a" for="Japanese-cuisine">
-                    <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox" 
-                    name="cuisine" 
-                    id="Indian-cuisine" 
-                    value="Indian" 
-                        >
-                <label data-on-clicked="a" for="Indian-cuisine">
-                    <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
-                </label>
-            </div>
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Indian-cuisine" 
+                value="Indian" 
+                    >
+            <label data-on-clicked="a" for="Indian-cuisine">
+                <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
+            </label>
         </div>
     </div>
     
