@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .checked {
   color: orange;
 } 
@@ -34,3 +35,41 @@
     color: darkgoldenrod;  
 }
 
+=======
+.checked {
+  color: orange;
+} 
+
+.rate {
+    float: left;
+    height: 50px;
+}
+
+.rate:not(checked) > input {
+    top:-9999px;
+    position:absolute;
+}
+
+.rate:not(checked) > label {
+    float:right;
+    width:1em;
+    font-size:35px;
+    color: grey;
+}
+
+
+.rate:not(checked) > label:before {
+    content: '★';
+}
+
+
+.rate > input:checked ~ label {
+    color: orange;    
+}
+
+.rate:not(checked) > label:hover,
+.rate:not(checked) > label:hover ~ label {
+    color: darkgoldenrod;  
+}
+
+>>>>>>> 14c3cbee1f8ab1c0586af5d854fc7a86bcf9c10f
