@@ -63,7 +63,7 @@
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="index.html">OrderBoss</a>
+						<a href="home.html">OrderBoss</a>
 					</h1>
 				</div>
 				<div class="top-nav">
@@ -76,7 +76,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="search.html">Search</a></li>
 								<li><a href="about.html">About</a></li>				
-								<li><a class="active" href="contact.html">Contact</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>	
 							<div class="clearfix"> </div>
 						</div>	
@@ -97,27 +97,21 @@
 	<!-- banner -->
     
 
-   
 <!-----------------------------------------------------------
-restaurant brief view
-The <article> tag specifies independent, self-contained content.
+restaurant info
 ------------------------------------------------------------->
-
-
 
         <h2 href="???" title="SouthernTaste" target="_blank" style = " margin-top: 40px; margin-bottom: 40px">SouthernTaste Restaurant</h2>  
 
         <img src="http://www.hireafoodtruck.com.au/images/product_images/Chinese%20food%20menu.jpg" align = "left" 
-        style="width:500px;height:350px;margin-bottom:40px">
+        style="width:500px;height:350px;margin-bottom:40px; margin-left:30px">
 
-        <center><img class="img1" src="https://www.goodfood.com.au/content/dam/images/h/1/3/3/4/1/image.related.wideLandscape.940x529.h132gk.png/1532586740624.jpg" align = "middle" 
-        style="width:500px;height:350px;margin-bottom:40px"></center>
+        <img class="img1" src="https://www.goodfood.com.au/content/dam/images/h/1/3/3/4/1/image.related.wideLandscape.940x529.h132gk.png/1532586740624.jpg" align = "middle" 
+        style="width:500px;height:350px;margin-left:60px; margin-bottom:30px">
+   
+        <h2>Adelaide</h2>
 
-    <div class = "location">
-        <h3>Adelaide</h3>
-        
-    </div>
-    
+
     <div class="score ">
        <span class="fa fa-star checked"></span>
        <span class="fa fa-star checked"></span>
@@ -137,6 +131,22 @@ The <article> tag specifies independent, self-contained content.
     </ul>
 <hr/>
 
+<div class = "menu">
+    <h2>Menu</h2>
+
+    <ul>
+        <li>Spring Roll</li>
+        <li>Beef fried noodle</li>
+        <li>Fried rice</li>
+    </ul>
+    
+</div>
+
+<hr/>
+
+<!--Book-->
+
+<h2>Book Now</h2>
 <center>
             <label class="date">
                 <input id="Date-bar"
@@ -176,7 +186,38 @@ The <article> tag specifies independent, self-contained content.
         <!--Confirm button-->
     </center>
 
-			
+
+
+<hr/>	
+
+<!--Review-->
+
+<h2>Review</h2>
+
+<form>
+        <textarea id="words" rows="10" cols="100">Enter comment</textarea>
+        <input type="button" onclick="getwords()" value="Enter" /> <br>
+        <p id="para"></p>
+        </form>
+        
+        <script type="text/javascript">
+        function getwords() {
+          text = words.value;
+          document.getElementById("para").innerHTML += '<p>'+text
+          document.getElementById("words").value = "enter"
+        }
+        </script>
+
+<!-- <form action="SouthernTaste.html" method="post">
+    <div>
+    <textarea name="Write your comment here" placeholder="Write your comment here!" required="" allowfullscreen=""></textarea>
+    </div>
+    <input type="submit" value="Send">
+    </form> -->
+
+
+
+</div>
 <!-- footer -->
 <div class="w3-agile-footer">
     <div class="container">
