@@ -23,17 +23,15 @@
 <script src="javascripts/jquery-1.11.1.min.js"></script>
 <script src="javascripts/bootstrap.js"></script>
 <!-- light-box -->
-<link rel="stylesheet" href="css/lightbox.css">
+<link rel="stylesheet" href="stylesheets/lightbox.css">
 <!-- //light-box -->
-<script src="js/SmoothScroll.min.js"></script>
+<script src="javascripts/SmoothScroll.min.js"></script>
     
 <!--    //rating-star-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
+    
+<link rel="stylesheet" href="stylesheets/ratingstar.css">
+
     
 <!--search jQuery-->
 <script src="js/main.js"></script>
@@ -41,18 +39,24 @@
 
 </head>
 <body>
-	<div class="w3layouts-banner-top"></div>
-
-<!--
-        <div class="top-banner-right">
-            <ul>
-                <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
--->
-    
-
+	<div class="banner">
+		<div class="top-banner">
+			<div class="container">
+				<div class="top-banner-left">
+					<ul>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +61 888 888 888</li>
+						<li><a href="OrderBoss@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> OrderBoss@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="top-banner-right">
+					<ul>
+						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
 		<div class="header">
 			<div class="container">
 				<div class="logo">
@@ -60,20 +64,27 @@
 						<a href="index.html">OrderBoss</a>
 					</h1>
 				</div>
-			
 				<div class="top-nav">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
-                    <a class="active" href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="menu.html">Menu</a>
-                    <a href="contact.html">Contact</a>
-                     	  
-                    </div>		
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">search						
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>							
+								<li><a href="search.html">Search</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+					</nav>		
 				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
+    
+
 		<div class="banner-slider">
 			<div class="container">
 				<div class="slider">
@@ -81,14 +92,8 @@
                         
 
                                     
-                                    
 <!-------------------------------------------------------------
-
-
                 homepage search bar
-
-
-
 --------------------------------------------------------------->
                         <h3>Book your favourite restaurant here</h3>
                             <div class="Search Restaurant-bar">
@@ -100,8 +105,8 @@
                                         <input id="Date-bar"
                                                name="calander"
                                                type="date"
-                                               value="2019-06-09"
-                                               data-default-date="2019-06-09">
+                                               value="2019-06-11"
+                                               data-default-date="2019-06-11">
                                     </label>
 
                                     <label class="DinningTime">
@@ -151,7 +156,6 @@
 <!-----------------------------------------------------------
         
   Cuisine check boxes
-
 ------------------------------------------------------------->
 
 <h3>Cuisines</h3>
@@ -161,7 +165,7 @@
                id="Australian-cuisine" 
                value="Australian"
                align = "right"
-                >
+            >
         <label data-on-clicked="a" for="Australian-cuisine">
             <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
         </label>
@@ -208,22 +212,19 @@
     </div>
    
 <!-----------------------------------------------------------
-
-
 restaurant brief view
 The <article> tag specifies independent, self-contained content.
-
 ------------------------------------------------------------->
 
 
 <article class="Restaruant Info">
     <img class="img1" src="http://img3.imgtn.bdimg.com/it/u=3068351480,1042252957&fm=26&gp=0.jpg"
     align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
+    style="width:200px;height:170px;margin-right:20px;">
     
     <header>
         <h2>
-           <a href="???" title="SouthernTaste" target="_blank">
+           <a href="SouthernTaste.html" title="SouthernTaste" target="_blank">
                 SouthernTaste Restaurant
            </a>
         </h2>
@@ -259,7 +260,7 @@ The <article> tag specifies independent, self-contained content.
     <article class="Restaruant Info">
     <img class="img1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560089416392&di=9e53a511f0a1806d5fa18a7287ea7722&imgtype=0&src=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F__49519129__8954941.jpg"
     align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
+    style="width:200px;height:170px;margin-right:20px;">
     
     <header>
         <h2>
@@ -294,13 +295,14 @@ The <article> tag specifies independent, self-contained content.
     </ul>
 
  </article>
+  
 <hr/>
     
     
     <article class="Restaruant Info">
     <img class="img1" src="http://img.zx123.cn/Resources/zx123cn/uploadfile/2016/1118/b2aee290d6c49cb82dcd2ec2cbad76f6.jpg"
     align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
+    style="width:200px;height:170px;margin-right:20px;">
     
     <header>
         <h2>
