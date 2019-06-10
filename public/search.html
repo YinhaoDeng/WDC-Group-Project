@@ -1,3 +1,4 @@
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,18 +42,24 @@
 
 </head>
 <body>
-	<div class="w3layouts-banner-top"></div>
-
-<!--
-        <div class="top-banner-right">
-            <ul>
-                <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
--->
-    
-
+	<div class="banner">
+		<div class="top-banner">
+			<div class="container">
+				<div class="top-banner-left">
+					<ul>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +61 888 888 888</li>
+						<li><a href="OrderBoss@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> OrderBoss@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="top-banner-right">
+					<ul>
+						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
 		<div class="header">
 			<div class="container">
 				<div class="logo">
@@ -60,20 +67,27 @@
 						<a href="index.html">OrderBoss</a>
 					</h1>
 				</div>
-			
 				<div class="top-nav">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
-                    <a class="active" href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="menu.html">Menu</a>
-                    <a href="contact.html">Contact</a>
-                     	  
-                    </div>		
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">search						
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>							
+								<li><a href="search.html">Search</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+					</nav>		
 				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
+    
+
 		<div class="banner-slider">
 			<div class="container">
 				<div class="slider">
@@ -81,14 +95,8 @@
                         
 
                                     
-                                    
 <!-------------------------------------------------------------
-
-
                 homepage search bar
-
-
-
 --------------------------------------------------------------->
                         <h3>Book your favourite restaurant here</h3>
                             <div class="Search Restaurant-bar">
@@ -151,7 +159,6 @@
 <!-----------------------------------------------------------
         
   Cuisine check boxes
-
 ------------------------------------------------------------->
 
 <h3>Cuisines</h3>
@@ -161,7 +168,7 @@
                id="Australian-cuisine" 
                value="Australian"
                align = "right"
-                >
+            >
         <label data-on-clicked="a" for="Australian-cuisine">
             <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
         </label>
@@ -208,11 +215,8 @@
     </div>
    
 <!-----------------------------------------------------------
-
-
 restaurant brief view
 The <article> tag specifies independent, self-contained content.
-
 ------------------------------------------------------------->
 
 
