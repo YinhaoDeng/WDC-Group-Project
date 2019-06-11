@@ -47,16 +47,14 @@
 			<div class="container">
 				<div class="top-banner-left">
 					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
-						<li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> mail@example.com</a></li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +61 888 888 888</li>
+						<li><a href="example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> OrderBoss@gmail.com</a></li>
 					</ul>
 				</div>
 				<div class="top-banner-right">
 					<ul>
 						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a class="facebook" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a class="facebook" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -96,9 +94,23 @@
 	<!-- contact -->
 	<div class="contact">
 		<div class="container">	
-			<div class="w3l-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158858.18237072596!2d-0.10159865000003898!3d51.52864165000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1436514341845" allowfullscreen=""></iframe>
-			</div>
+			            <!----------------------------------------Google map API------------------------------------------->
+                        <div id="map"></div>
+                        <script>
+                            var map;
+                            function initMap() {
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                center: {lat: -34.93, lng: 138.60},
+                                zoom: 12
+                            });
+                            }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
+                        </script>
+                        <!-----------------------------------------Google map API stops----------------------------------------->
+                        <br>
+                        <hr class="special-horizontal-style">
+            
 			<div class="contact-form">
 				<h3>Contact form</h3>
 				<form action="#" method="post">
@@ -109,128 +121,11 @@
 					<input type="submit" value="Send">
 				</form>
 			</div>
-			<div class="w3ls-contact-grids">
-				<h3>Our Branches</h3>
-				<div class="agileits-address-grids">
-					<div class="col-md-4 address-text">
-						<div class="agileinfo-address-grid">
-							<h5>10-43 Jack Road, 
-								<span>Glasgow, D-6 78GH</span>
-							</h5>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Freephone :</p>
-								</div>
-								<div class="address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Telephone :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>FAX :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-								<div class="e-mail">
-									<p>E-mail : <a href="mailto:example@email.com">Example@mail.com</a></p>
-								</div>
-						</div>
-					</div>
-					<div class="col-md-4 address-text">
-						<div class="agileinfo-address-grid">
-							<h5>09-45 Mary Road, 
-								<span>London, J-9 09SD</span>
-							</h5>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Freephone :</p>
-								</div>
-								<div class="address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Telephone :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>FAX :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="e-mail">
-								<p>E-mail : <a href="mailto:example@email.com">Example@mail.com</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 address-text">
-						<div class="agileinfo-address-grid">
-							<h5>34-05 Shone Road, 
-								<span>Mexico, M-5 09SD</span>
-							</h5>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Freephone :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>Telephone :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="wthree-address-info">
-								<div class="w3-agileits-address-info-left">
-									<p>FAX :</p>
-								</div>
-								<div class="w3-agileits-address-info-left address-info-right">
-									<p>+1 123 456 7890</p>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-							<div class="e-mail">
-								<p>E-mail : <a href="mailto:example@email.com">Example@mail.com</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
 		</div> 			
 	</div>
 	<!-- //contact -->
-	<!-- footer -->
-	<div class="w3-agile-footer">
+<!--------------------------------------- footer ----------------------------------------->
+<div class="w3-agile-footer">
 		<div class="container">
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid">
@@ -238,11 +133,11 @@
 						<h4>Address</h4>
 					</div>
 					<div class="footer-grid-info">
-						<p>Eiusmod Tempor inc
-							<span>St Dolore Place,Kingsport 56777.</span>
+						<p>AUCHINA FOOD OrderBoss inc
+							<span>St Adelaide Place, 5000.</span>
 						</p>
-						<p class="phone">Phone : +1 123 456 789
-							<span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
+						<p class="phone">Phone : +61 888 888 888
+							<span>Email : <a href="OrderBoss:example@email.com">OrgerBoss@gmail.com</a></span>
 						</p>
 					</div>
 				</div>
@@ -252,9 +147,9 @@
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="home.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
-							<li><a href="search.html">search</a></li>
+							<li><a href="search.html">Search</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -267,8 +162,6 @@
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							<li><a href="#"><i class="fa fa-vk"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -286,29 +179,10 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="agileits-w3layouts-copyright">
-				<p>Copyright &copy; 2019.Company name All rights reserved.</p>
+				<p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
 			</div>
 		</div>
-	</div>
 	<!-- //footer -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
+</div>
 </body>	
 </html>
