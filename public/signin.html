@@ -1,34 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Signin page</title>
-	<!-- load the google platform library -->
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<!-- specify your app's client ID -->
-	<meta name="google-signin-client_id" content="10712956315-03hq0emnv71ir8eajbj1a7iccdcp447g.apps.googleusercontent.com ">
-	<!--jQuery CDN--> <!--If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network). 
-	Both Google and Microsoft host jQuery.-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<title>Sign In Page</title>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="/public/javascripts/signin.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<meta name="google-signin-client_id" content="746162454288-e37qd4es89ohffhd4463n0muvlg5obol.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src ="javascripts/signin.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+	<!--// css -->
+	<!-- font-awesome icons -->
+	<link href="stylesheets/font-awesome.css" rel="stylesheet"> 
+	<!-- //font-awesome icons -->
+	<!-- font -->
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+	<style>
+		.data
+		{
+			display: none;
+		}
+	</style>
 </head>
 <body>
 
-		<h3>Login</h3>
-		<form action="#" method="post">
-			<p><input type="text" name="Email" placeholder="Email" required=""></p>
-			<p><input type="text" name="Password" placeholder="Password" required=""></p>
-			<p><input type="submit" value="Send"></p>
-			<!-- Facebook Sign in -->
-			<button type="button">Continue with Facebook</button>
-			<br>
-			<br>
-			<div class="g-signin2" data-onsuccess="onSignIn"><button type="button">Continue with Google</button></div>
-					
-			<hr><button type="button">Create new account</button>
-		</form>
+	<!-- banner -->
+	<div class="banner about-banner">
+			<div class="top-banner">
+				<div class="container">
+					<div class="top-banner-left">
+						<ul>
+							<li><i class="fa fa-phone" aria-hidden="true"></i> +61 888 888 888</li>
+							<li><a href="OrderBoss:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> OrderBoss@gmail.com</a></li>
+						</ul>
+					</div>
+					<div class="top-banner-right">
+						<ul>
+							<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="header">
+				<div class="container">
+					<div class="logo">
+						<h1>
+							<a href="home.html">OrderBoss</a>
+						</h1>
+					</div>
+					<div class="top-nav">
+						<nav class="navbar navbar-default">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">search						
+								</button>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="home.html">Home</a></li>
+									<li><a href="search.html">Search</a></li>
+									<li><a href="about.html">About</a></li>				
+									<li><a class="active" href="contact.html">Contact</a></li>
+								</ul>	
+								<div class="clearfix"> </div>
+							</div>	
+						</nav>		
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="w3-about-heading">
+				<h2>Sign in</h2>
+			</div>
 	</div>
+	<!-- banner -->
+
+	<!--login starts heres-->
+	<div class="container">
+		<br>
+		<form action="#" method="post">
+				<p><input type="text" name="Email" placeholder="Email" required=""></p>
+				<p><input type="text" name="Password" placeholder="Password" required=""></p>
+				<p><input type="submit" value="Send"></p> 
+		</form>
+		
+		<div class="g-signin2" button onclick="signIn()"></div>
+
+		<div class="data">
+			<p>Welcome to the Orderboss</p>
+			<p>Now you can chose the resturant now !</p>
+			<a href="home.html">chose the restuerant now</a>
+			<button onclick="signOut()">SignOut</button>
+		</div>
+		<br>
+	</div>
+	
+	<!--//login-->
+	
+	<!-- footer -->
+	<div class="w3-agile-footer">
+			<div class="container">
+				<div class="footer-grids">
+					<div class="col-md-3 footer-grid">
+						<div class="footer-grid-heading">
+							<h4>Address</h4>
+						</div>
+						<div class="footer-grid-info">
+							<p>AUCHINA FOOD OrderBoss inc
+								<span>St Adelaide Place, 5000.</span>
+							</p>
+							<p class="phone">Phone : +61 888 888 888
+								<span>Email : <a href="OrderBoss:example@email.com">OrgerBoss@gmail.com</a></span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<div class="footer-grid-heading">
+							<h4>Navigation</h4>
+						</div>
+						<div class="footer-grid-info">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="search.html">Search</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<div class="footer-grid-heading">
+							<h4>Follow</h4>
+						</div>
+						<div class="social">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<div class="footer-grid-heading">
+							<h4>Newsletter</h4>
+						</div>
+						<div class="footer-grid-info">
+							<form action="#" method="post">
+								<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+								<input type="submit" value="Subscribe">
+							</form>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="agileits-w3layouts-copyright">
+					<p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
+				</div>
+			</div>
+	</div>
+	<!-- //footer -->
+	
 </body>
+
+
+
+</html>
 	
