@@ -1,75 +1,44 @@
-<<<<<<< HEAD
 .checked {
-  color: orange;
-} 
-
-.rate {
-    float: left;
-    height: 50px;
-}
-
-.rate:not(checked) > input {
-    top:-9999px;
-    position:absolute;
-}
-
-.rate:not(checked) > label {
-    float:right;
-    width:1em;
-    font-size:35px;
-    color: grey;
-}
-
-
-.rate:not(checked) > label:before {
-    content: '★';
-}
-
-
-.rate > input:checked ~ label {
-    color: orange;    
-}
-
-.rate:not(checked) > label:hover,
-.rate:not(checked) > label:hover ~ label {
-    color: darkgoldenrod;  
-}
-
-=======
-.checked {
-  color: orange;
-} 
-
-.rate {
-    float: left;
-    height: 50px;
-}
-
-.rate:not(checked) > input {
-    top:-9999px;
-    position:absolute;
-}
-
-.rate:not(checked) > label {
-    float:right;
-    width:1em;
-    font-size:35px;
-    color: grey;
-}
-
-
-.rate:not(checked) > label:before {
-    content: '★';
-}
-
-
-.rate > input:checked ~ label {
-    color: orange;    
-}
-
-.rate:not(checked) > label:hover,
-.rate:not(checked) > label:hover ~ label {
-    color: darkgoldenrod;  
-}
-
->>>>>>> 14c3cbee1f8ab1c0586af5d854fc7a86bcf9c10f
+    color: orange;
+  } 
+  
+  .rate {
+      float: left;
+      height: 50px;
+  }
+  
+  
+  /*The :checked pseudo-class in CSS selects elements when they are in the selected state. It is only associated with input (<input>) elements of type radio and checkbox .*/
+  
+  .rate:not(checked) > input {
+      top:-9999px;
+      position:absolute;
+  }
+  
+  .rate:not(checked) > label {
+      float:right;
+      width:1em;
+      font-size:35px;
+      color: grey;
+  }
+  
+  
+  
+  .rate:not(checked) > label:before {
+      content: '★';
+  }
+  
+  /* highlight stars on hover */
+  
+  /* show gold(orange) star when clicked */
+  .rate > input:checked ~ label {
+      color: orange;    
+  }
+  /* hover current star */
+  .rate:not(:checked) > label:hover,
+   /* hover previous stars in list */
+  .rate:not(:checked) > label:hover ~ label {
+      color: darkgoldenrod;  
+  }
+  
+  

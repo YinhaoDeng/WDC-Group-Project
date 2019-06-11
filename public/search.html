@@ -1,61 +1,61 @@
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
+    <title>Search Results</title>
+    
     <!-- bootstrap-css -->
     <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
     <!-- css -->
     <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="stylesheets/lightbox.css">
     <!--// css -->
-    <!-- font-awesome icons -->
-    <link href="stylesheets/font-awesome.css" rel="stylesheet"> 
-    <!-- //font-awesome icons -->
+
+    <!-- font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+    <!-- //font -->
+    
     <!-- font -->
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-    <!-- //font -->
-    <script src="javascripts/jquery-1.11.1.min.js"></script>
-    <script src="javascripts/bootstrap.js"></script>
-    <!-- light-box -->
-    <link rel="stylesheet" href="stylesheet/lightbox.css">
-    <!-- //light-box -->
-    <script src="javascripts/SmoothScroll.min.js"></script>
         
-    <!--    //rating-star-->
+    <!--rating-star-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
-        .checked {
+        .checked {   /* star color*/
         color: orange;
         }
-        #map {
-            height: 50%;
-            width: 30%;
-            padding-right: 15em;
-            padding-left: 15em;
-         
+        #map { 
+            height: 60%;
+            width: 70%;
+            padding-right: 13em;
+            padding-left: 10em;
+            top: 1em;
+            left: 5em;
         }
         html, body {
-        height: 100%;
-        margin: left;
-        padding: 0;
+            height: 100%;
+            margin: left;
+            padding: 0;
+        }
+        .vl {          /* DO NOT CHANGE IT!!!!!!!!!!!!!!!!!! */
+            border-left: 2px solid lightgrey;
+            height: 46.1em;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 46.8em;
+        }
+        .special-horizontal-style{
+            border-top: 2px solid lightgrey;
         }
     </style>
-        
-    <!--search jQuery-->
-    <script src="javascripts/main.js"></script>
-    <!--//search jQuery-->
 </head>
 
 
 
 <body>
-	<!-- banner -->
+	<!-------------- banner ------------->
 	<div class="banner">
 		<div class="top-banner">
 			<div class="container">
@@ -93,7 +93,6 @@
 								<li><a class="active" href="search.html">Search</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>	
-							<div class="clearfix"> </div>
 						</div>	
 					</nav>		
 				</div>
@@ -117,8 +116,8 @@
                                                 <input id="Date-bar"
                                                        type="date"
                                                        name="date"
-                                                       value="2019-06-09"
-                                                       data-default-date="2019-06-09">
+                                                       value="2019-06-11"
+                                                       data-default-date="2019-06-11">
                                             </label>
                                         
                                             <label class="DinningTime">
@@ -146,12 +145,7 @@
                                                         <option value="11" >11 people</option>
                                                         <option value="12" >12 people</option>
                                                 </select>
-                                            </label>
-                                           <a class="agile-icon" href="search.html"><i class="fa fa-search">Let's go!</i></a>
-                                        <!--Let's go search button-->
-                                        
-                                        
-                                    
+                                            </label>                
                                     </form>
 								</div>
 					</div>
@@ -159,87 +153,98 @@
 			</div>
 		</div>
 	</div>
-	<!-- banner -->
-    
-    <div class="container999">
-            <div class="left-half">
-    <!----------------------------------------Google map API------------------------------------------->
-        <div id="map"></div>
-        <script>
-            var map;
-            function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.93, lng: 138.60},
-                zoom: 14
-            });
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
-        </script>
-    <!-----------------------------------------Google map API stops----------------------------------------->
+    <!------------ banner --------------->
     
 
+    <h1 style="text-align:center">Restaruants in Adelaide</h1>
+    <hr class="special-horizontal-style">
+    <div class="container999">
+        <div class="left-half">
+
+            <div class="vl"></div>  <!--vertical line-->
+
+            <!----------------------------------------Google map API------------------------------------------->
+            <div id="map"></div>
+            <script>
+                var map;
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.93, lng: 138.60},
+                    zoom: 12
+                });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
+            </script>
+            <!-----------------------------------------Google map API stops----------------------------------------->
+            
+            <br>
+            <hr class="special-horizontal-style">
 
 <!-----------------------------------------------------------
   Cuisine check boxes
 ------------------------------------------------------------->
+            <div class="cuisines">
 
-        <div>
-            <h3>Cuisines</h3>   
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Australian-cuisine" 
-                value="Australian"
-                align = "right"
-                >
-            <label data-on-clicked="a" for="Australian-cuisine">
-                <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
-            </label>
-        </div>
+                <div>
+                    <h3>Cuisines</h3>   
+                    <input type="checkbox" 
+                        name="cuisine" 
+                        id="Australian-cuisine" 
+                        value="Australian"
+                        align = "right"
+                        >
+                    <label data-on-clicked="a" for="Australian-cuisine">
+                        <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
+                    </label>
+                </div>
 
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Asian-cuisine" 
-                value="Asian" 
-                >
-            <label data-on-clicked="a" for="Asian-cuisine">
-                <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
-            </label>
-        </div>
-        
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Italian-cuisine" 
-                value="Italian" 
-                    >
-            <label data-on-clicked="a" for="modern-australian-cuisine">
-                <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
-            </label>
-        </div>
+                <div>
+                    <input type="checkbox" 
+                        name="cuisine" 
+                        id="Asian-cuisine" 
+                        value="Asian" 
+                        >
+                    <label data-on-clicked="a" for="Asian-cuisine">
+                        <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (3)</a>
+                    </label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" 
+                        name="cuisine" 
+                        id="Italian-cuisine" 
+                        value="Italian" 
+                            >
+                    <label data-on-clicked="a" for="modern-australian-cuisine">
+                        <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
+                    </label>
+                </div>
 
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Japanese-cuisine" 
-                value="Japanese" 
-                    >
-            <label data-on-clicked="a" for="Japanese-cuisine">
-                <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
-            </label>
-        </div>
+                <div>
+                    <input type="checkbox" 
+                        name="cuisine" 
+                        id="Japanese-cuisine" 
+                        value="Japanese" 
+                            >
+                    <label data-on-clicked="a" for="Japanese-cuisine">
+                        <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (1)</a>
+                    </label>
+                </div>
 
-        <div>
-            <input type="checkbox" 
-                name="cuisine" 
-                id="Indian-cuisine" 
-                value="Indian" 
-                    >
-            <label data-on-clicked="a" for="Indian-cuisine">
-                <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
-            </label>
-        </div>
+                <div>
+                    <input type="checkbox" 
+                        name="cuisine" 
+                        id="Indian-cuisine" 
+                        value="Indian" 
+                            >
+                    <label data-on-clicked="a" for="Indian-cuisine">
+                        <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (1)</a>
+                    </label>
+                </div>
+
+            </div>
+        <!--HERE SHOULD HAVE A CLOSE DIV TAG, BUT IF I ADD IT, THE PAGE LAYOUT WILL GO WRONG-->
     </div>
     
 <!-----------------------------------------------------------
@@ -374,7 +379,7 @@ The <article> tag specifies independent, self-contained content.
 
             <br>  
     </div>
-</div>
+    </div>
 <!--------------------------------------- footer ----------------------------------------->
 <div class="w3-agile-footer">
 		<div class="container">
@@ -398,7 +403,7 @@ The <article> tag specifies independent, self-contained content.
 					</div>
 					<div class="footer-grid-info">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="home.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="search.html">Search</a></li>
 							<li><a href="contact.html">Contact</a></li>
@@ -434,6 +439,6 @@ The <article> tag specifies independent, self-contained content.
 			</div>
 		</div>
 	<!-- //footer -->
-	
+</div>
 </body>	
 </html>
