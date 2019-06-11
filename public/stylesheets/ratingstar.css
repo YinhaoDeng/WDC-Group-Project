@@ -7,6 +7,9 @@
     height: 50px;
 }
 
+
+/*The :checked pseudo-class in CSS selects elements when they are in the selected state. It is only associated with input (<input>) elements of type radio and checkbox .*/
+
 .rate:not(checked) > input {
     top:-9999px;
     position:absolute;
@@ -20,17 +23,21 @@
 }
 
 
+
 .rate:not(checked) > label:before {
     content: '★';
 }
 
+/* highlight stars on hover */
 
+/* show gold(orange) star when clicked */
 .rate > input:checked ~ label {
     color: orange;    
 }
-
-.rate:not(checked) > label:hover,
-.rate:not(checked) > label:hover ~ label {
+/* hover current star */
+.rate:not(:checked) > label:hover,
+ /* hover previous stars in list */
+.rate:not(:checked) > label:hover ~ label {
     color: darkgoldenrod;  
 }
 
