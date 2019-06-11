@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
     <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
@@ -31,16 +30,30 @@
     <!--    //rating-star-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    .checked {
-    color: orange;
-    }
+        .checked {
+        color: orange;
+        }
+        #map {
+            height: 50%;
+            width: 30%;
+            padding-right: 15em;
+            padding-left: 15em;
+         
+        }
+        html, body {
+        height: 100%;
+        margin: left;
+        padding: 0;
+        }
     </style>
         
     <!--search jQuery-->
     <script src="javascripts/main.js"></script>
     <!--//search jQuery-->
-
 </head>
+
+
+
 <body>
 	<!-- banner -->
 	<div class="banner">
@@ -75,7 +88,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="home.html">Home</a></li>
 								<li><a href="about.html">About</a></li>							
 								<li><a class="active" href="search.html">Search</a></li>
 								<li><a href="contact.html">Contact</a></li>
@@ -95,7 +108,8 @@
 								<div class="agileits-banner-info">
                                     <h3>Book your favourite restaurant here: </h3>
                                     <br>
-									<!--search criteria input here-->
+                                    <!--search criteria input here-->
+                                    
 									<form>
 										<input id="Homepage Search Bar" type="text" placeholder = "Search Restaurant"></input>
                                         
@@ -109,6 +123,7 @@
                                         
                                             <label class="DinningTime">
                                                 <select name="DinningTime" data-default-service="Dinner" id="DinningTime-bar">
+                                                        <option value="None" disabled="disabled" hidden="hidden">Time</option>
                                                         <option value="Breakfast">Breakfast</option>
                                                         <option value="Lunch">Lunch</option>
                                                         <option value="Dinner" selected>Dinner</option>
@@ -117,6 +132,7 @@
                                             
                                             <label class="Party Size">
                                                 <select name="PartySize"  data-default-covers="2" id="PartySize-bar">
+                                                        <option value="0" disabled="disabled" hidden="hidden" >Party Size</option>
                                                         <option value="1" >1 person</option>
                                                         <option value="2" selected>2 people</option>
                                                         <option value="3" >3 people</option>
@@ -131,7 +147,7 @@
                                                         <option value="12" >12 people</option>
                                                 </select>
                                             </label>
-                                            <button type="button" onclick="load()"> Let's Go</button>
+                                           <a class="agile-icon" href="search.html"><i class="fa fa-search">Let's go!</i></a>
                                         <!--Let's go search button-->
                                         
                                         
@@ -139,287 +155,285 @@
                                     </form>
 								</div>
 					</div>
-					<script src="javascripts/responsiveslides.min.js"></script>
-					
-					<!--banner Slider starts Here-->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- banner -->
     
+    <div class="container999">
+            <div class="left-half">
+    <!----------------------------------------Google map API------------------------------------------->
+        <div id="map"></div>
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.93, lng: 138.60},
+                zoom: 14
+            });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDemto5zX3gd3rEetwIBko_Jc4NQPbtYWI&callback=initMap" allowfullscreen="">
+        </script>
+    <!-----------------------------------------Google map API stops----------------------------------------->
+    
+
+
 <!-----------------------------------------------------------
-        
   Cuisine check boxes
 ------------------------------------------------------------->
 
-<h3>Cuisines</h3>
-   
-    <div>
-        <input type="checkbox" 
-               name="cuisine" 
-               id="Australian-cuisine" 
-               value="Australian"
-               align = "right"
-            >
-        <label data-on-clicked="a" for="Australian-cuisine">
-            <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
-        </label>
-    </div>
+        <div>
+            <h3>Cuisines</h3>   
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Australian-cuisine" 
+                value="Australian"
+                align = "right"
+                >
+            <label data-on-clicked="a" for="Australian-cuisine">
+                <a href="/restaurants-adelaide/Australian-cuisine" ><span>Australian</span> (2)</a>
+            </label>
+        </div>
 
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Asian-cuisine" 
+                value="Asian" 
+                >
+            <label data-on-clicked="a" for="Asian-cuisine">
+                <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
+            </label>
+        </div>
+        
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Italian-cuisine" 
+                value="Italian" 
+                    >
+            <label data-on-clicked="a" for="modern-australian-cuisine">
+                <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
+            </label>
+        </div>
 
-    <div >
-        <input type="checkbox" 
-               name="cuisine" 
-               id="Asian-cuisine" 
-               value="Asian" 
-            >
-        <label data-on-clicked="a" for="Asian-cuisine">
-            <a href="/restaurants-adelaide/Asian-cuisine" ><span>Asian </span> (2)</a>
-        </label>
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Japanese-cuisine" 
+                value="Japanese" 
+                    >
+            <label data-on-clicked="a" for="Japanese-cuisine">
+                <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
+            </label>
+        </div>
+
+        <div>
+            <input type="checkbox" 
+                name="cuisine" 
+                id="Indian-cuisine" 
+                value="Indian" 
+                    >
+            <label data-on-clicked="a" for="Indian-cuisine">
+                <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
+            </label>
+        </div>
     </div>
     
-    <div>
-        <input type="checkbox" 
-               name="cuisine" 
-               id="Italian-cuisine" 
-               value="Italian" 
-                >
-        <label data-on-clicked="a" for="modern-australian-cuisine">
-            <a href="/restaurants-adelaide/Italian-cuisine" ><span>Italian</span> (2)</a>
-        </label>
-    </div>
-    <div>
-        <input type="checkbox" 
-               name="cuisine" 
-               id="Japanese-cuisine" 
-               value="Japanese" 
-                >
-        <label data-on-clicked="a" for="Japanese-cuisine">
-            <a href="/restaurants-adelaide/Japanese-cuisine" ><span>Japanese</span> (2)</a>
-        </label>
-    </div>
-   <div>
-        <input type="checkbox" 
-               name="cuisine" 
-               id="Indian-cuisine" 
-               value="Indian" 
-                >
-        <label data-on-clicked="a" for="Indian-cuisine">
-            <a href="/restaurants-adelaide/Indian-cuisine" ><span>Indian</span> (2)</a>
-        </label>
-    </div>
-   
 <!-----------------------------------------------------------
 restaurant brief view
 The <article> tag specifies independent, self-contained content.
 ------------------------------------------------------------->
-
-
-<div class="w3-agileits-special-grid-info">
-<article class="Restaruant Info">
-    <img class="img1" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/74/80/54/lana-asian-street-food.jpg"
-    align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
-    
-    <header>
-        <h2>
-           <a href="SouthernTaste.html" title="SouthernTaste" target="_blank">
-                SouthernTaste Restaurant
-           </a>
-        </h2>
-    </header>
+    <div class="right-half">
         
-            <div class = "location">
-                <span>Adelaide</span>
-            </div>
+            <div class="w3-agileits-special-grid-info">
+                <article class="Restaruant Info">
+                    <img class="img1" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/74/80/54/lana-asian-street-food.jpg"
+                    align = "left";
+                    style="width:170px;height:170px;margin-right:20px;">
+                    
+                    <header>
+                        <h1>
+                        <a href="SouthernTaste.html" title="SouthernTaste" target="_blank">
+                                SouthernTaste Restaurant
+                        </a>
+                        </h1>
+                    </header>
+                    
+                        <div class = "location">
+                            <span>Adelaide</span>
+                        </div>
+                        
+                        <div class="score ">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+
+                            <span class="score-description">
+                                <a class="review-count" href="review.html">38 reviews</a>
+                            </span>
             
-            <div class="score ">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-
-                    <span class="score-description">
-                        <a class="review-count" href="review.html">38 reviews</a>
-                    </span>
-                    </div>
-        
-            <ul>
-                    <li class="cuisines">Cuisines:Asian</li>
-                    <li class="cost">Average cost per person: $55</li>
-                    <li class="opening hour">Open 5pm - 10pm</li>
-            </ul>
-    </article>
-</div>
-
-<br>
-
-<div class="w3-agileits-special-grid-info">
-    <article class="Restaruant Info">
-    <img class="img1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560089416392&di=9e53a511f0a1806d5fa18a7287ea7722&imgtype=0&src=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F__49519129__8954941.jpg"
-    align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
-    
-    <header>
-        <h2>
-           <a href="???" title="BestTreat" target="_blank">
-                BestTreat Restaurant
-           </a>
-        </h2>
-             
-    </header>
-    
-    <div class = "location">
-        <span>Adelaide</span>
-        
-    </div>
-    
-    <div class="score ">
-       <span class="fa fa-star checked"></span>
-       <span class="fa fa-star checked"></span>
-       <span class="fa fa-star checked"></span>
-       <span class="fa fa-star checked"></span>
-       <span class="fa fa-star"></span>
-
-            <span class="score-description">
-                 <a class="review-count" href="reviews">13 reviews</a>
-            </span>
+                            <ul>
+                                    <li class="cuisines">Cuisines:Asian</li>
+                                    <li class="cost">Average cost per person: $55</li>
+                                    <li class="opening hour">Open 5pm - 10pm</li>
+                            </ul>
+                        </div>
+                </article>
             </div>
 
-    <ul>
-            <li class="cuisines">Cuisines:Asian</li>
-            <li class="cost">Average cost per person: $65</li>
-            <li class="opening hour">Open 5:30pm - 11:00pm</li>
-    </ul>
+            <br>
 
-    </article>
-</div>
-    
-<br>
-    
-<div class="w3-agileits-special-grid-info">
-    <article class="Restaruant Info">
-    <img class="img1" src="http://img.zx123.cn/Resources/zx123cn/uploadfile/2016/1118/b2aee290d6c49cb82dcd2ec2cbad76f6.jpg"
-    align = "left";
-    style="width:170px;height:170px;margin-right:20px;">
-    
-    <header>
-        <h2>
-           <a href="???" title="DelightWay" target="_blank">
-                DelightWay Restaurant
-           </a>
-        </h2>
-             
-    </header>
-    
-    <div class = "location">
-        <span>Adelaide</span>
-        
-    </div>
-    
-    <div class="score ">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
+            <div class="w3-agileits-special-grid-info">
+                <article class="Restaruant Info">
+                <img class="img1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560089416392&di=9e53a511f0a1806d5fa18a7287ea7722&imgtype=0&src=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F__49519129__8954941.jpg"
+                align = "left";
+                style="width:170px;height:170px;margin-right:20px;">
+                
+                <header>
+                    <h2>
+                    <a href="BestTreat.html" title="BestTreat" target="_blank">
+                            BestTreat Restaurant
+                    </a>
+                    </h2>
+                        
+                </header>
+                
+                <div class = "location">
+                    <span>Adelaide</span>
+                    
+                </div>
+                
+                <div class="score ">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
 
-            <span class="score-description">
-                 <a class="review-count" href="reviews">18 reviews</a>
-            </span>
+                        <span class="score-description">
+                            <a class="review-count" href="reviews">13 reviews</a>
+                        </span>
+                        </div>
+
+                <ul>
+                        <li class="cuisines">Cuisines:Asian</li>
+                        <li class="cost">Average cost per person: $65</li>
+                        <li class="opening hour">Open 5:30pm - 11:00pm</li>
+                </ul>
+
+                </article>
+            </div>
+                
+            <br>
+                
+            <div class="w3-agileits-special-grid-info">
+                <article class="Restaruant Info">
+                <img class="img1" src="http://img.zx123.cn/Resources/zx123cn/uploadfile/2016/1118/b2aee290d6c49cb82dcd2ec2cbad76f6.jpg"
+                align = "left";
+                style="width:170px;height:170px;margin-right:20px;">
+                
+                <header>
+                    <h2>
+                    <a href="DelightWay.html" title="DelightWay" target="_blank">
+                            DelightWay Restaurant
+                    </a>
+                    </h2>
+                        
+                </header>
+                
+                <div class = "location">
+                    <span>Adelaide</span>
+                    
+                </div>
+                
+                <div class="score ">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+
+                        <span class="score-description">
+                            <a class="review-count" href="reviews">18 reviews</a>
+                        </span>
+                        </div>
+
+                <ul>
+                        <li class="cuisines">Cuisines:  Australian</li>
+                        <li class="cost">Average cost per person: $55</li>
+                        <li class="opening hour">Open 5:30pm - 10pm</li>
+                </ul>
+
+                </article>
             </div>
 
-    <ul>
-            <li class="cuisines">Cuisines:  Australian</li>
-            <li class="cost">Average cost per person: $55</li>
-            <li class="opening hour">Open 5:30pm - 10pm</li>
-    </ul>
-
-    </article>
+            <br>  
+    </div>
 </div>
-
-<br>
-
-<!-- footer -->
+<!--------------------------------------- footer ----------------------------------------->
 <div class="w3-agile-footer">
-    <div class="container">
-        <div class="footer-grids">
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Address</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <p>Eiusmod Tempor inc
-                        <span>St Dolore Place,Kingsport 56777.</span>
-                    </p>
-                    <p class="phone">Phone : +1 123 456 789
-                        <span>Email : <a href="mailto:example@email.com">mail@example.com</a></span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Navigation</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="search.html">search</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Follow</h4>
-                </div>
-                <div class="social">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Newsletter</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <form action="#" method="post">
-                        <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
-                        <input type="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-        <div class="agileits-w3layouts-copyright">
-            <p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
-        </div>
-    </div>
-</div>
-<!-- //footer -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Address</h4>
+					</div>
+					<div class="footer-grid-info">
+						<p>AUCHINA FOOD OrderBoss inc
+							<span>St Adelaide Place, 5000.</span>
+						</p>
+						<p class="phone">Phone : +61 888 888 888
+							<span>Email : <a href="OrderBoss:example@email.com">OrgerBoss@gmail.com</a></span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Navigation</h4>
+					</div>
+					<div class="footer-grid-info">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="search.html">Search</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Follow</h4>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Newsletter</h4>
+					</div>
+					<div class="footer-grid-info">
+						<form action="#" method="post">
+							<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+							<input type="submit" value="Subscribe">
+						</form>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileits-w3layouts-copyright">
+				<p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
+			</div>
+		</div>
+	<!-- //footer -->
+	
 </body>	
 </html>
