@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Book with SouthernTaste</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
@@ -15,23 +10,10 @@
 <!-- font-awesome icons -->
 <link href="stylesheets/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
-<script src="javascripts/jquery-1.11.1.min.js"></script>
-<script src="javascripts/bootstrap.js"></script>
-<!-- light-box -->
-<link rel="stylesheet" href="css/lightbox.css">
-<!-- //light-box -->
-<script src="javascripts/SmoothScroll.min.js"></script>
-<!--search jQuery-->
-<script src="javascripts/main.js"></script>
-<!--//search jQuery-->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
+<!-- font -->
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<script src="javascripts/render.js"></script>
 </head>
 <body>
    <!--    //rating-star-->
@@ -51,16 +33,14 @@
 			<div class="container">
 				<div class="top-banner-left">
 					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</li>
-						<li><a href="example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> ordderboss@gamil.com</a></li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> +61 888 888 888</li>
+						<li><a href="OrderBoss:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> Orderboss@gamil.com</a></li>
 					</ul>
 				</div>
 				<div class="top-banner-right">
 					<ul>
 						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a class="facebook" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a class="facebook" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -223,84 +203,65 @@ restaurant info
 
 
 </div>
-<!-- footer -->
+<!--------------------------------------- footer ----------------------------------------->
 <div class="w3-agile-footer">
-    <div class="container">
-        <div class="footer-grids">
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Address</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <p>thine thane inc
-                        <span>St Dannis,Adelaide 50000.</span>
-                    </p>
-                    <p class="phone">Phone : +1 123 456 789
-                        <span>Email : <a href="example@email.com">orderboss@gamil.com</a></span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Navigation</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="search.html">search</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Follow</h4>
-                </div>
-                <div class="social">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <div class="footer-grid-heading">
-                    <h4>Newsletter</h4>
-                </div>
-                <div class="footer-grid-info">
-                    <form action="#" method="post">
-                        <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
-                        <input type="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-        <div class="agileits-w3layouts-copyright">
-            <p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
-        </div>
-    </div>
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Address</h4>
+					</div>
+					<div class="footer-grid-info">
+						<p>AUCHINA FOOD OrderBoss inc
+							<span>St Adelaide Place, 5000.</span>
+						</p>
+						<p class="phone">Phone : +61 888 888 888
+							<span>Email : <a href="OrderBoss:example@email.com">OrgerBoss@gmail.com</a></span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Navigation</h4>
+					</div>
+					<div class="footer-grid-info">
+						<ul>
+							<li><a href="home.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="search.html">Search</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Follow</h4>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Newsletter</h4>
+					</div>
+					<div class="footer-grid-info">
+						<form action="#" method="post">
+							<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+							<input type="submit" value="Subscribe">
+						</form>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileits-w3layouts-copyright">
+				<p>Copyright &copy; 2019 . OrderBoss All rights reserved.</p>
+			</div>
+		</div>
+	<!-- //footer -->
 </div>
-<!-- //footer -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
 </body>	
 </html>
